@@ -12,11 +12,11 @@ public abstract class Product {
 	protected Product(String name, BigDecimal price, BigDecimal tax) {
 		this.name = name;
 		if (this.name == null || this.name.equals("")) {
-			throw new IllegalArgumentException("nsdull");
+			throw new IllegalArgumentException("Null or empty name");
 		}
 		this.price = price;
 		if (this.price == null || this.price.intValue() < 0) {
-			throw new IllegalArgumentException("nsdull");
+			throw new IllegalArgumentException("Null or negative price");
 		}
 		this.taxPercent = tax;
 	}
